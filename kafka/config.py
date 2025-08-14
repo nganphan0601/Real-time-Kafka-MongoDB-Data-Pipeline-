@@ -10,6 +10,8 @@ SRC_KAFKA_CONFIG = {
     "sasl.mechanism" : os.getenv("SRC_SASL_MECHANISM"),
     "sasl.username": os.getenv("SRC_SASL_USERNAME"),
     "sasl.password": os.getenv("SRC_SASL_PASSWORD"),
+    "auto.offset.reset": os.getenv("DST_AUTO_OFFSET_RESET", "earliest"),
+    "group.id": "remote-consumer-group"
 }
 
 SRC_KAFKA_TOPIC = os.getenv("SRC_TOPIC")
