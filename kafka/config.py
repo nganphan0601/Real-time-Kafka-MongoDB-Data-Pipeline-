@@ -19,9 +19,10 @@ SRC_KAFKA_TOPIC = os.getenv("SRC_TOPIC")
 
 DST_KAFKA_CONFIG = {
     "bootstrap.servers": os.getenv("DST_BOOTSTRAP_SERVERS"),
-    "security.protocol": os.getenv("DST_SECURITY_PROTOCOL", "PLAINTEXT"),  
+    "security.protocol": os.getenv("DST_SECURITY_PROTOCOL"),  
     "group.id": os.getenv("DST_GROUP_ID", "local-consumer-group"),  
     "auto.offset.reset": os.getenv("DST_AUTO_OFFSET_RESET", "earliest"), 
+    "broker.address.family": "v4"
 }
 
 DST_KAFKA_TOPIC = os.getenv("DST_TOPIC")

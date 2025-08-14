@@ -20,7 +20,7 @@ try:
         
         message_value = msg.value()
 
-        print(f"Received message: {message_value.decode('utf-8')}")
+        print(f"✅Received message: {message_value.decode('utf-8')}")
 
         # Produce the messages to local Kafka
         producer.produce(DST_KAFKA_TOPIC, value=message_value)
