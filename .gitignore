@@ -1,2 +1,11 @@
+# Ignore Python cache and logs
+__pycache__/
+*.pyc
+*.log
+
+# Ignore env files
 .env
-db
+venv/
+
+# Ignore MongoDB data (if local data in db/)
+db/
