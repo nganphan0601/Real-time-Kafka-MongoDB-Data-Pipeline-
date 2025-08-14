@@ -9,3 +9,6 @@ venv/
 
 # Ignore MongoDB data (if local data in db/)
 db/
+
+# Ignore test connection file
+kafka/connection.py
